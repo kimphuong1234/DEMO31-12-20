@@ -15,6 +15,7 @@
     }
 
         .header .name .option {
+            border-color:white;
             font-size: 16px;
         }
 

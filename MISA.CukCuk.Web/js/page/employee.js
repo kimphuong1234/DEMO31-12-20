@@ -12,7 +12,7 @@ class employeejs extends BaseJS {
     }
 
     setDataUrl() {
-        this.getDataUrl = "http://api.manhnv.net/api/employees";
+        this.getDataUrl = "http://localhost:62480/api/v1/Employees";
     }
 
 }

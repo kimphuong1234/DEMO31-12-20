@@ -1,4 +1,4 @@
-﻿.navbar {
+.navbar {
     width: 220px;
     height: 97vh;
     background-color: #ffffff;
@@ -29,8 +29,10 @@
         }
 
         .navbar .logo-box .amis-logo {
-            height: 24px;
+            height: 30px;
             width: 100%;
+            margin-top: -4px;
+            margin-left: 10px;
             background-size: contain;
             background-repeat: no-repeat;
             background-image: url('/content/image/cukcuk-logo.png');
@@ -54,7 +56,6 @@
 .nav-item .navbar-item-icon {
     width: 20px;
     height: 20px;
-    border: 1px #808080 solid;
     align-self: center;
     background-size: contain;
     margin-right: 8px;

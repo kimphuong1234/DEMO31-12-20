@@ -6,10 +6,15 @@
     border: 0px solid #ccc;
 }
 
-.filter-bar .filter-left{
-
-}
-    .filter-bar .filter-right {
-        position: absolute;
-        right: 16px;
+    .filter-bar .filter-left {
+        
     }
+
+.filter-bar .filter-left .choice {
+    width: 100px;
+}
+
+.filter-bar .filter-right {
+    position: absolute;
+    right: 16px;
+}

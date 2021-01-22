@@ -5,7 +5,7 @@
     width: calc(100% - 221px);
     height: calc(94vh - 61px);
     background-color: #ffffff;
-    /*padding: 16px;*/
+    padding-left: 10px;
 }
 
     /*page-title*/
@@ -25,9 +25,9 @@
         }
         /*filter-bar*/
     .content .filter-bar .filter-left {
-        
+        /*background-color:#ff0000;*/       
     }
-    
+
     /*paging*/
     .content .paging-bar {
         height: 56px;

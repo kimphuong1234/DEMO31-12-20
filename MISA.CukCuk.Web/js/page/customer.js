@@ -1,5 +1,13 @@
 ﻿$(document).ready(function () {
     new CustomerJS();
+    dialogDetail = $(".m-dialog").dialog({
+        autoOpen: true,
+        fluid: true,
+        minWidth: 700,
+        resizable: true,
+        position: ({ my: "center", at: "center", of: window }),
+        modal: true,
+    })
 })
 /**
  * Class quan ly su kien cho trang CustomerJS

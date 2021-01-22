@@ -1,5 +1,6 @@
 ﻿
-.m-dialog {
+.m-dialog .dialog-detail{
+display:none;
 }
     /*Nền xám bên dưới*/
     .m-dialog .dialog-model {

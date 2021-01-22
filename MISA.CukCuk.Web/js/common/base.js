@@ -11,39 +11,37 @@
     }
 
     initEvents() {
-        var me = this;
+        //var me = this;
         //sự kiện click thi nhấn vào thêm ms
         $('#btnAdd').click(function () {
             //Hiển thị dialog thông tin chi tiết:
-            $('.dialog-detail').show();
-            $('#txtCustomerCode').focus();
-            
+            //$('.dialog-detail').show();
+            $('#txtEmployeeCode').focus();
+            dialogDetail.dialog('open');
         })
 
         //Load lại dữ liệu khi ấn button Load
         $('#btnRefresh').click(function () {
             //Hiểnthị customer thông tin chi tiết sau khi Load data:
-            $('#table').remove('tr');
-            me.loadData();
-
-        })
+            this.loadData();
+        }.bind(this))
 
         //Ẩn form chi tiết khi ấn X:
         $('#btnX').click(function () {
             //Hiển thị customer thông tin chi tiết:
-            $('.dialog-detail').hide();
+            dialogDetail.dialog('close');
 
         })
 
         //Ẩn form chi tiết khi ấn hủy:
         $('#btnCancel').click(function () {
             //Hiển thị customer thông tin chi tiết:
-            $('.dialog-detail').hide();
+            dialogDetail.dialog('close');
 
         })
 
         //Thực hiện lưu dữ liệu khi ấn button LƯU trên form chi tiết
-        $('#btnSave').click(function () {
+        $('#Add').click(function () {
 
             //Validate dữ liệu:
             var inputvaidates = $('input[required], input[type="email"]');
@@ -60,23 +58,23 @@
             }
 
             //Thu thập thông tin dữ liệu được nhập -> buid thành object
-            //var customer = {
-            //    "CustomerCode": $('#txtCustomerCode').val(),
-            //    "FullName": $('#txtFullName').val(),
-            //    "Address": $('#txtAddress').val(),
-            //    "DateOfBirth": $('#dtDateOfBirth').val(),
-            //    "Email": $('#txtEmail').val(),
-            //    "PhoneNumber": $('#txtPhoneNumber').val(),
-            //    "CustomerGroupId": $("saassaasaa").val(),
-            //    "MemberCardCode": $('#txtMemberCardCode').val(),
+            //var employee = {
+            //    "employeecode": $('#txtcustomercode').val(),
+            //    "fullname": $('#txtfullname').val(),
+            //    "address": $('#txtaddress').val(),
+            //    "dateofbirth": $('#dtdateofbirth').val(),
+            //    "email": $('#txtemail').val(),
+            //    "phonenumber": $('#txtphonenumber').val(),
+            //    "customergroupid": $("saassaasaa").val(),
+            //    "membercardcode": $('#txtmembercardcode').val(),
             //}
             
             //Gọi service tương ứng thực hiện lưu dữ liệu:
-            var customer;
+            var employee;
             $.ajax({
-                url: 'http://api.manhnv.net/api/customers',
+                url: "http://localhost:62480/api/v1/Employees",
                 method: 'POST',
-                data: JSON.stringify(customer),
+                data: JSON.stringify(employee),
                 contentType: 'application/json'
             }).done(function (res) {
                 alert('Thêm thành công');
@@ -192,7 +190,7 @@
             //ghi log lỗi:
             console.log(e);
         }
-
     }
-}
+    }
+
 

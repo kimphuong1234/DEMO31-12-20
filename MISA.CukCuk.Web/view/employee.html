@@ -47,7 +47,7 @@
             </a>
             <a class="nav-item" href="employee.html">
                 <div class="navbar-item-icon nav-item-3"></div>
-                <div class="navbar-item-text">Danh mục nhan vien</div>
+                <div class="navbar-item-text">Danh mục nhân viên</div>
             </a>
 
             <div class="nav-item">
@@ -59,7 +59,7 @@
     </div>
     <div class="header">
         <div class="name">
-            <select class="option">
+            <select class="option" style="border-color:#ffffff; font-weight:bold; width:200px;">
                 <option>Nhà hàng Biển Đông</option>
                 <option>Nhà hàng biển nhớ</option>
                 <option>Nhà hàng bờ biển</option>
@@ -86,9 +86,14 @@
         </div>
         <div class="filter-bar">
             <div class="filter-left">
-                <input class="icon-search input-search" style="width:200px" type="text" placeholder="Tìm kiếm theo ma, Tên nhân viên" />
-                <select>
+                <input class="icon-search input-search" style="width:230px; height:18px;" type="text" placeholder="Tìm kiếm theo mã, Tên nhân viên" />
+                <select style="margin-top: 2px; border-radius: 4px; border-color: #BBBBBB; height: 40px; width: 200px; padding-left: 10px;" class="choice">
+                    <option>Tất cả phòng ban</option>
                     <option>Phòng đào tạo</option>
+                    <option>Phòng đào tạo</option>
+                </select>
+                <select style="margin-top: 2px; border-radius: 4px; border-color: #BBBBBB; height: 40px; width: 200px; padding-left: 10px;">
+                    <option>Tất cả vị trí</option>
                     <option>Phòng đào tạo</option>
                     <option>Phòng đào tạo</option>
                 </select>
@@ -103,14 +108,14 @@
                     <tr>
                         <th fieldName="EmployeeCode">Mã nhân viên</th>
                         <th fieldName="FullName">Họ và tên</th>
-                        <th fieldName="GenderName">Giới tính</th>
+                        <th fieldName="Gender">Giới tính</th>
                         <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
                         <th fieldName="PhoneNumber">Số điện thoại</th>
                         <th fieldName="Email">Email</th>
                         <th fieldName="PositionName">Chức vụ</th>
-                        <th fieldName="DepartmentName">Phòng ban</th>
+                        <th fieldName="Department">Phòng ban</th>
                         <th fieldName="Salary" formatType="Money">Mức lương cơ bản</th>
-                        <th fieldName="WorkStatusName">Tình trạng công việc</th>
+                        <th fieldName="WorkStatus">Tình trạng công việc</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -277,9 +282,9 @@
                 </div>
 
             </div>
-            <div class="dialog-footer">    
+            <div class="dialog-footer">
                 <div class="dialog-footer-detail">
-                    <button class="save" id="btnSave">
+                    <button class="save" id="btnAdd">
                         <div class="save-icon icon"></div>
                         <div class="save-text">lưu</div>
                     </button>
@@ -287,7 +292,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <script src="/lib/jquery-3.5.1.min.js"></script>
